@@ -57,7 +57,7 @@ public class GymRoutine {
         //input to ask what might be the routine
         Scanner reader = new
         Scanner(System.in);
-        System.out.print("Chose what you want to hit, 1-legs 2-chest 3-back: ");
+        System.out.print("Chose what you want to hit, 1-legs 2-Push(chest) 3-Pull(back): ");
         int choosingHit = reader.nextInt();
         while (choosingHit>3 || choosingHit<0) {
             System.out.print("Not a valid number. Please try again: ");
@@ -90,8 +90,8 @@ public class GymRoutine {
             j = j - 1;
             int b = 4;
             int sChoose = rand.nextInt(b);
-            System.out.println(biceps.get(sChoose));
-            biceps.remove(sChoose);
+            System.out.println(triceps.get(sChoose));
+            triceps.remove(sChoose);
             b =  b - 1;
             }
         }
@@ -106,8 +106,8 @@ public class GymRoutine {
             j = j - 1;
             int b = 4;
             int sChoose = rand.nextInt(b);
-            System.out.println(triceps.get(sChoose));
-            triceps.remove(sChoose);
+            System.out.println(biceps.get(sChoose));
+            biceps.remove(sChoose);
             b =  b - 1;
             }
         }
