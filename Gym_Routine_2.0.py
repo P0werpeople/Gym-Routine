@@ -48,7 +48,7 @@ class GymRoutine:
             self.printing(legday)
         elif choice == 2:
             pushday = self.push()
-            self.pringint(pushday)
+            self.printing(pushday)
         elif choice == 3:
             pullday = self.pull()
             self.printing(pullday)
