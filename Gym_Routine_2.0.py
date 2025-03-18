@@ -42,16 +42,21 @@ class GymRoutine:
         return hits
 
     def main(self):
-        choice = int(input("What do you want to hit today: 1 - Legs, 2 - Push, 3 - Pull? "))
-        if choice == 1:
-            legday = self.legs()
-            self.printing(legday)
-        elif choice == 2:
-            pushday = self.push()
-            self.printing(pushday)
-        elif choice == 3:
-            pullday = self.pull()
-            self.printing(pullday)
+        try:
+            choice = int(input("What do you want to hit today: 1 - Legs, 2 - Push, 3 - Pull? "))
+            while choice > 3 or choice < 1:
+                choice = int(input("Please enter a valid number. 1 - Legs, 2 - Push, 3 - Pull "))
+            if choice == 1:
+                legday = self.legs()
+                self.printing(legday)
+            elif choice == 2:
+                pushday = self.push()
+                self.printing(pushday)
+            elif choice == 3:
+                pullday = self.pull()
+                self.printing(pullday)
+        except ValueError & UnboundLocalError & TypeError:
+            choice = int(input("Please enter a valid number. 1 - Legs, 2 - Push, 3 - Pull"))
         
 if __name__ == '__main__':
     GymRoutine().main()
