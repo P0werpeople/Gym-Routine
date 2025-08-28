@@ -43,9 +43,9 @@ class GymRoutine:
 
     def main(self):
         try:
-            choice = int(input("What do you want to hit today: 1 - Legs, 2 - Push, 3 - Pull? "))
+            choice = int(input("What do you want to hit today: 1 - Legs, 2 - Push (Chest), 3 - Pull (Back)? "))
             while choice > 3 or choice < 1:
-                choice = int(input("Please enter a valid number. 1 - Legs, 2 - Push, 3 - Pull "))
+                choice = int(input("Please enter a valid number. 1 - Legs, 2 - Push (Chest), 3 - Pull (Back)? "))
             if choice == 1:
                 legday = self.legs()
                 self.printing(legday)
